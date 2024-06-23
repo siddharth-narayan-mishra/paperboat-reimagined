@@ -18,10 +18,77 @@
   </head>
 
   <body>
-    <h1 class="patrick">Hello World!</h1>
+    <div id="hero1" class="w-full h-[100vh]">
+      <div id="waves">
+        <img
+          src="./assets/waves/wave.svg"
+          alt=""
+          class="wave z-[-10] absolute w-full bottom-16"
+        />
+        <img
+          src="./assets/waves/wave1.svg"
+          alt=""
+          class="wave z-[-10] absolute w-full bottom-8"
+        />
+        <img
+          src="./assets/waves/wave2.svg"
+          alt=""
+          class="wave z-[-10] absolute w-full bottom-0"
+        />
+        <img
+          src="./assets//boat.png"
+          id="boat"
+          alt=""
+          class="absolute z-[-5] bottom-15 right-6 wave"
+        />
+        <img
+          src="./assets/waves/wave3.svg"
+          alt=""
+          class="wave z-[-1] absolute w-full bottom-[-2rem]"
+        />
+        <img
+          src="./assets/waves/wave4.svg"
+          alt=""
+          class="wave z-[-1] absolute w-full bottom-[-4rem]"
+        />
+        <img
+          src="./assets/logo.png"
+          id="hero-logo"
+          alt=""
+          class="aspect-auto w-32 m-8 ml-24"
+        />
+      </div>
+    </div>
+
+    <div
+      id="placeholder-gradient"
+      class="bg-gradient-to-b from-[#00b4d8] to-[#CBCED9] h-[15rem] mt-7 mix-blend-lighten"
+    ></div>
+
+    <div id="hero2" class="w-full h-[100vh] flex justify-evenly items-center px-32">
+        <div id="hero2-left" class="h-full flex flex-col justify-evenly">
+        <img src="./assets/logo.png" alt="" class="w-32" />
+        <h1 class="patrick text-6xl font-black">Sip into Nostalgia</h1>
+        <h4 class="patrick text-lg max-w-[40vw]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          eveniet in commodi alias facilis inventore aliquam possimus voluptatum
+          earum veniam.
+        </h4>
+        <div
+          id="cta-btn"
+          class="bg-black px-4 py-3 font-semibold w-fit text-white rounded-lg shadow-sm hover:scale-105 hover:shadow-xl transition-all duration-200 delay-200"
+        >
+          Shop Now!
+        </div>
+      </div>
+      <div id="hero2-right">
+        <img src="./assets/hero2-img.png" alt="" class="ml-16 drop-shadow-2xl" />
+      </div>
+    </div>
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="script.js"></script>
