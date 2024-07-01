@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Quotable';
+  src: url('/fonts/Quotable.eot');
+  src: url('/fonts/Quotable.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Quotable.woff2') format('woff2'),
+      url('/fonts/Quotable.woff') format('woff'),
+      url('/fonts/Quotable.ttf') format('truetype'),
+      url('/fonts/Quotable.svg#Quotable') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.quotable{
+  font-family: 'Quotable';
+}
+
 /* lenis smooth scroll settings */
 html.lenis, html.lenis body {
     height: auto;
@@ -29,8 +46,12 @@ html.lenis, html.lenis body {
     font-family: 'Inter',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body{
-  overflow: hidden;
+.standard{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.fantasy{
+  font-family: fantasy;
 }
 
 .patrick{
@@ -42,4 +63,106 @@ body{
     background:
       /* linear-gradient(rgba(255,255,255,.5), rgba(0,0,0,.5)), */
       url('./assets/grainy.svg');
+}
+
+img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+@media only screen and (max-width: 670px) {
+  #expanded-nav-food div{
+    padding-block: 1rem;
+  }
+  #expanded-nav-bev div{
+    padding-block: 1rem;
+  }
+}
+
+#expanded-nav-bev div,#expanded-nav-food div{
+  min-height: 3rem;
+}
+
+section{
+  min-height: 100dvh;
+  width: 100%;
+}
+
+#testimonials{
+  background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F521%2F811%2Foriginal%2Friver-vector.jpg&f=1&nofb=1&ipt=deb2925642a63441ff5d82c0ff9bf115841e68ed69c2bf1a895c5e7ca17cc340&ipo=images");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+}
+
+#product-showcase {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.showcase-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+#swing{
+  transform-origin: 60% -80%;
+}
+
+@media (max-width: 768px) {
+  #mobile-menu {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  #mobile-menu.hidden {
+    display: none;
+    opacity: 0;
+  }
+
+  #mobile-menu:not(.hidden) {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.testimonial-bottle {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-bottle:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .testimonial-bottle img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-bottle img {
+    width: 30px;
+  }
+}
+
+#product-showcase{
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vw);
+  scroll-snap-type: x mandatory;
 }
