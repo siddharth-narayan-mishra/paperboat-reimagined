@@ -10,7 +10,7 @@ const foodImages = [
 
 const bevImages = [
   "https://i.postimg.cc/PrbKzjP2/swing-juices-cropped.jpg",
-  "/assets/hero2-img.png",
+  "https://i.postimg.cc/GmCtSRNf/hero2-img.png",
   "https://i.postimg.cc/dQBCttXR/zero-sugar-drinks-1.jpg",
   "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b7b1665d-f116-478b-9bb6-ef7f7ab7e8eb.__CR0,0,970,600_PT0_SX970_V1___.png",
 ]
