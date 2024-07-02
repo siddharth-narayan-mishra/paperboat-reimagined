@@ -400,3 +400,54 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenu.classList.add("hidden")
   })
 })
+
+
+// hrushikesh's js
+const slider = document.querySelector("#newPinch");
+const footerele = document.querySelectorAll("#pgfooter");
+
+// Timeline for slider
+let tl1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: slider,
+    pin: true,
+    scrub: 1,
+    end: () => "+=" + slider.offsetWidth,
+  }
+});
+
+tl1.to(slider, {
+  xPercent: -66,
+  ease: "none"
+});
+
+// Individual ScrollTriggers for nostalgia sections
+gsap.utils.toArray(["#nostalgia1", "#nostalgia2", "#nostalgia3"]).forEach((section, index) => {
+  let elements = section.querySelectorAll('img, p');
+  gsap.from(elements, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    },
+    x: (i) => i % 2 === 0 ? -50 : 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+    stagger: 0.2
+  });
+});
+
+// Footer animation
+gsap.from("#c1, #c2, #c3", {
+  scrollTrigger: {
+    trigger: footerele,
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  y: 30,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.2
+});

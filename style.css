@@ -170,3 +170,93 @@ section{
   scroll-snap-points-y: repeat(100vw);
   scroll-snap-type: x mandatory;
 }
+
+/* hrushikesh's js */
+#pgfooter{
+  background-image: linear-gradient( 178.7deg,  rgb(240, 237, 240) 5.6%, rgb(224, 84, 137) 95.3% );
+  width: 100vw;
+  height: 50vh;
+  overflow-y: hidden;
+}
+a[data-footer] {
+  transition: transform 0.3s ease;
+}
+
+a[data-footer]:hover {
+  transform: translateX(20px);
+}
+#coro{
+  background-image: url("../paper-boat/assets/corianderbuttermilk.jpg");
+}
+#apple{
+background-color:#fdfdfd;
+background-image: radial-gradient(rgb(215, 95, 95) 15%, transparent 16%),
+radial-gradient(rgb(224, 48, 48) 15%, transparent 16%);
+background-size: 60px 60px;
+background-position: 0 0, 30px 30px;
+width: 100vw;
+height: 100vh;
+}
+#coriander{
+  background:
+    radial-gradient(black 5px, transparent 6px),
+    radial-gradient(black 5px, transparent 6px),
+    linear-gradient(#ADFF2F 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #ADFF2F;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    width: 100vw;
+    height: 100vh;
+}
+#coconut{
+background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color: #50C878;
+background-size:16px 16px;
+width: 100vw;
+height: 100vh;
+}
+#newPinch{
+  width: 300vw;
+  height: 100vh;
+  overflow: hidden;
+
+}
+#nostalgia{
+  width: 100vw;
+  height: 300vh;
+  background-color: #F8DE7E;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+#nostalgia1{
+  width: 100vw;
+  height: 100vh;
+}
+#nostalgia2{
+  width: 100vw;
+  height: 100vh;
+}
+#nostalgia3{
+  width: 100vw;
+  height: 100vh;
+}
+#rainy{
+  width: 100vw;
+}
+#rain{
+  translate: -20px;
+}
+p[data-para]{
+  font-family: "Patrick Hand";
+  font-size: x-large;
+  
+}
+h1[data-para]{
+  font-family: "Patrick Hand";
+  font-size: x-large;
+}
