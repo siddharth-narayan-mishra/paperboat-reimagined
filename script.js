@@ -235,7 +235,7 @@ const modalImage = document.getElementById("modal-image")
 function createBottle(testimonial, index) {
   const bottle = document.createElement('div');
   bottle.classList.add('testimonial-bottle');
-  bottle.innerHTML = `<img src="https://i.postimg.cc/zf7gF6Ph/bottle.png" alt="Testimonial bottle" class="w-16 h-auto">`;
+  bottle.innerHTML = `<img src="https://i.postimg.cc/zf7gF6Ph/bottle.png" alt="Testimonial bottle" class="w-24 h-auto">`;
 
   bottle.style.left = `${5 + (index * 18) % 90}%`;
   bottle.style.bottom = `${60 + Math.random() * 60}%`;
