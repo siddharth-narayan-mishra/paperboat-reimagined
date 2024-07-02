@@ -238,7 +238,7 @@ function createBottle(testimonial, index) {
   bottle.innerHTML = `<img src="https://i.postimg.cc/zf7gF6Ph/bottle.png" alt="Testimonial bottle" class="w-24 h-auto">`;
 
   bottle.style.left = `${5 + (index * 18) % 90}%`;
-  bottle.style.bottom = `${60 + Math.random() * 60}%`;
+  bottle.style.bottom = `${30 + Math.random() * 60}%`;
   
   gsap.set(bottle, { rotation: Math.random() * 30 - 15 });
 
