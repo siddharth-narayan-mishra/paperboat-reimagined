@@ -4,14 +4,14 @@ import textSplitter from "./utils"
 const foodImages = [
   "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ad1d6f5b-c9ab-405c-b8fa-b747617db8f7.__CR0,0,970,600_PT0_SX970_V1___.jpg",
   "https://m.media-amazon.com/images/I/7199nVD7I5L._AC_CR0%2C0%2C0%2C0_SX615_SY462_.jpg",
-  "https://i.postimg.cc/V6P71LTQ/sweet-bites-1.jpg",
-  "https://i.postimg.cc/bJPRWVDq/dairy-1.jpg",
+  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mishry.com%2Fwp-content%2Fuploads%2F2022%2F03%2Fpaper-boat-chikki-review-1024x492.png&f=1&nofb=1&ipt=aaf09033b52fb356355ca5d6f861161515367b027932d4f7d17cc493423d7b9b&ipo=images",
+  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigbasket.com%2Fmedia%2Fuploads%2Fp%2Fl%2F40200833-9_1-paper-boat-badam-milk-almond-flavour.jpg&f=1&nofb=1&ipt=80a5ef2636993d3e7fbb4af88b15d2720577c8ba3517988c3a567b24503b0554&ipo=images",
 ]
 
 const bevImages = [
   "https://i.postimg.cc/PrbKzjP2/swing-juices-cropped.jpg",
-  "https://i.postimg.cc/GmCtSRNf/hero2-img.png",
-  "https://i.postimg.cc/dQBCttXR/zero-sugar-drinks-1.jpg",
+  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bombayspices.ca%2Fwp-content%2Fuploads%2F2019%2F03%2FPAPER-BOAT-SOFT-DRINK.jpg&f=1&nofb=1&ipt=54e7d72054e1e4945b25a045d988440cdd893c7e64ad4cf2929c222025ea87d6&ipo=images",
+  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FS%2Faplus-media-library-service-media%2F1dcc59cf-9b99-49e1-b26a-494f552ef16c.__CR0%2C0%2C970%2C600_PT0_SX970_V1___.png&f=1&nofb=1&ipt=6ca156076e06b13ad47daf718e27a6d575b2d601543cbad143769881aa151711&ipo=images",
   "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b7b1665d-f116-478b-9bb6-ef7f7ab7e8eb.__CR0,0,970,600_PT0_SX970_V1___.png",
 ]
 
