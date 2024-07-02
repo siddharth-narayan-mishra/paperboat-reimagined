@@ -173,7 +173,7 @@ section{
 
 /* hrushikesh's js */
 #pgfooter{
-  background-image: linear-gradient( 178.7deg,  rgb(240, 237, 240) 5.6%, rgb(224, 84, 137) 95.3% );
+  background-image: linear-gradient( 178.7deg,  #FFB6C1 5.6%, #ffffff 95.3% );
   width: 100vw;
   height: 50vh;
   overflow-y: hidden;
@@ -259,4 +259,39 @@ p[data-para]{
 h1[data-para]{
   font-family: "Patrick Hand";
   font-size: x-large;
+}
+
+/* Base styles */
+#newPinch {
+  display: flex;
+  flex-direction: row; /* Default to row for larger screens */
+  position: relative;
+  width: 300vw; /* Width to fit all items horizontally */
+  height: 100vh; /* Ensure the container takes full height */
+  overflow-x: hidden; /* Hide the horizontal scrollbar */
+  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+#newPinch > div {
+  flex-shrink: 0;
+  width: 100vw; /* Each item takes full viewport width */
+  box-sizing: border-box;
+  padding: 1rem;
+  scroll-snap-align: start; /* Snap alignment */
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+  #newPinch {
+    flex-direction: column; /* Stack items vertically */
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Adjust height to fit content */
+    overflow-x: visible; /* Allow vertical scrolling */
+  }
+
+  #newPinch > div {
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height to fit content */
+  }
 }

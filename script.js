@@ -123,29 +123,29 @@ foodNavOptions.forEach((item, idx) => {
 
 //product showcase animation
 
-gsap.from("#swing",{
+gsap.from("#swing", {
   rotation: -25,
   duration: 2,
   repeat: -1,
-  yoyo:true,
-  ease: "sine.inOut"
+  yoyo: true,
+  ease: "sine.inOut",
 })
 
-function wiggle(component){
+function wiggle(component) {
   gsap.to(component, {
-  rotation: "random(-30,30)",
-  x: "random(-20,20)",
-  y: "random(-20,20)",
-  repeat: -1,
-  yoyo: true,
-  ease: "steps(3)",
-  duration: 1,
-  stagger: {
-    each: 0.5,
-    repeat:-1,
-    yoyo:true
-  },
-})
+    rotation: "random(-30,30)",
+    x: "random(-20,20)",
+    y: "random(-20,20)",
+    repeat: -1,
+    yoyo: true,
+    ease: "steps(3)",
+    duration: 1,
+    stagger: {
+      each: 0.5,
+      repeat: -1,
+      yoyo: true,
+    },
+  })
 }
 wiggle(".swing-juices-showcase-decor")
 wiggle(".chikki-showcase-decor")
@@ -173,17 +173,12 @@ function initProductShowcase() {
   const mediaQuery = window.matchMedia("(min-width: 768px)")
 
   if (!mediaQuery.matches) {
-    // Mobile layout
-    // Remove any existing GSAP animations
     ScrollTrigger.getAll().forEach((st) => st.kill())
     gsap.set(".showcase-item", { clearProps: "all" })
   }
 }
 
-// Run on load
 initProductShowcase()
-
-// Run on window resize
 window.addEventListener("resize", initProductShowcase)
 
 //testimonials
@@ -225,22 +220,22 @@ const testimonials = [
   },
 ]
 
-const bottlesContainer = document.querySelector('.bottles-container');
-const modal = document.getElementById('testimonial-modal');
-const modalContent = document.getElementById('modal-content');
-const modalName = document.getElementById('modal-name');
+const bottlesContainer = document.querySelector(".bottles-container")
+const modal = document.getElementById("testimonial-modal")
+const modalContent = document.getElementById("modal-content")
+const modalName = document.getElementById("modal-name")
 const modalContainer = document.getElementById("modal-container")
 const modalImage = document.getElementById("modal-image")
 
 function createBottle(testimonial, index) {
-  const bottle = document.createElement('div');
-  bottle.classList.add('testimonial-bottle');
-  bottle.innerHTML = `<img src="https://i.postimg.cc/zf7gF6Ph/bottle.png" alt="Testimonial bottle" class="w-24 h-auto">`;
+  const bottle = document.createElement("div")
+  bottle.classList.add("testimonial-bottle")
+  bottle.innerHTML = `<img src="https://i.postimg.cc/zf7gF6Ph/bottle.png" alt="Testimonial bottle" class="w-24 h-auto">`
 
-  bottle.style.left = `${5 + (index * 18) % 90}%`;
-  bottle.style.bottom = `${30 + Math.random() * 60}%`;
-  
-  gsap.set(bottle, { rotation: Math.random() * 30 - 15 });
+  bottle.style.left = `${5 + ((index * 18) % 90)}%`
+  bottle.style.bottom = `${30 + Math.random() * 60}%`
+
+  gsap.set(bottle, { rotation: Math.random() * 30 - 15 })
 
   gsap.to(bottle, {
     y: "random(-30, 30)",
@@ -248,102 +243,107 @@ function createBottle(testimonial, index) {
     duration: 2 + Math.random() * 2,
     repeat: -1,
     yoyo: true,
-    ease: "sine.inOut"
-  });
+    ease: "sine.inOut",
+  })
 
-  bottle.addEventListener('click', () => {
+  bottle.addEventListener("click", () => {
     modalContent.textContent = `"${testimonial.message}"`
     modalImage.src = testimonial.img
-    modalName.textContent = testimonial.name;
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
+    modalName.textContent = testimonial.name
+    modal.classList.remove("hidden")
+    modal.classList.add("flex")
     modalContainer.style.backgroundImage = `url("${testimonial.background}")`
-    gsap.from(modal.children[0], {scale: 0, duration: 0.5, ease: "back.out(1.7)"});
-  });
+    gsap.from(modal.children[0], {
+      scale: 0,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    })
+  })
 
-  bottlesContainer.appendChild(bottle);
+  bottlesContainer.appendChild(bottle)
 }
 
 function initTestimonials() {
-  bottlesContainer.innerHTML = '';
-  testimonials.forEach(createBottle);
+  bottlesContainer.innerHTML = ""
+  testimonials.forEach(createBottle)
 }
-initTestimonials();
-window.addEventListener('resize', initTestimonials);
+initTestimonials()
+window.addEventListener("resize", initTestimonials)
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) modal.classList.add('hidden');
-});
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.classList.add("hidden")
+})
 
 const responsiveAnimation = gsap.timeline({
   scrollTrigger: {
     trigger: "#testimonials",
     start: "top bottom",
     end: "bottom top",
-    scrub: 1
-  }
-});
+    scrub: 1,
+  },
+})
 
 responsiveAnimation.to(".testimonial-bottle", {
   y: (i) => -50 - i * 20,
   stagger: 0.1,
-  ease: "none"
-});
+  ease: "none",
+})
 
 //paper-boat-process
 
 const processTexts = [
   "Fresh fruits picked at peak ripeness",
   "Gently extracted to preserve natural flavors",
-  "Bottled with love, ready to refresh!"
-];
+  "Bottled with love, ready to refresh!",
+]
 
-const textElement = document.getElementById("process-text");
-let currentTextIndex = -1;
+const textElement = document.getElementById("process-text")
+let currentTextIndex = -1
 
 function updateText(index) {
-  if (index === currentTextIndex) return;
-  
-  currentTextIndex = index;
-  
+  if (index === currentTextIndex) return
+
+  currentTextIndex = index
+
   gsap.to(textElement, {
     opacity: 0,
     duration: 0.5,
     onComplete: () => {
-      textElement.innerHTML = processTexts[index];
-      gsap.to(textElement, { opacity: 1, duration: 0.5 });
-    }
-  });
+      textElement.innerHTML = processTexts[index]
+      gsap.to(textElement, { opacity: 1, duration: 0.5 })
+    },
+  })
 }
 
 // Create the timeline
-const juiceTl = gsap.timeline();
+const juiceTl = gsap.timeline()
 
-juiceTl.to("#fruit", {
-  y: "25vh",
-  scale: 1.5,
-  duration: 20
-})
-.to("#orchard", { opacity: 0, duration: 10 }, "+=10")
-.to("#factory", { opacity: 1, duration: 10 }, "-=10")
-.to("#fruit", {
-  y: "35vh",
-  scale: 1,
-  duration: 20
-})
-.to("#fruit", { opacity: 0, duration: 5 }, "+=10")
-.to("#juice-drop", { 
-  opacity: 1,
-  y: "40vh",
-  scale: 3,
-  duration: 20
-})
-.to("#juice-drop", { opacity: 0, duration: 5 })
-.to("#paper-boat-bottle", { 
-  y: "-=200",
-  opacity:1,
-  duration: 20
-});
+juiceTl
+  .to("#fruit", {
+    y: "25vh",
+    scale: 1.5,
+    duration: 20,
+  })
+  .to("#orchard", { opacity: 0, duration: 10 }, "+=10")
+  .to("#factory", { opacity: 1, duration: 10 }, "-=10")
+  .to("#fruit", {
+    y: "35vh",
+    scale: 1,
+    duration: 20,
+  })
+  .to("#fruit", { opacity: 0, duration: 5 }, "+=10")
+  .to("#juice-drop", {
+    opacity: 1,
+    y: "40vh",
+    scale: 3,
+    duration: 20,
+  })
+  .to("#juice-drop", { opacity: 0, duration: 5 })
+  .to("#paper-boat-bottle", {
+    y: "-=200",
+    opacity: 1,
+    duration: 20,
+  })
 
 // Set up ScrollTrigger
 ScrollTrigger.create({
@@ -356,36 +356,23 @@ ScrollTrigger.create({
   anticipatePin: 1,
   onUpdate: (self) => {
     if (self.progress < 0.33) {
-      updateText(0);
+      updateText(0)
     } else if (self.progress < 0.66) {
-      updateText(1);
+      updateText(1)
     } else {
-      updateText(2);
+      updateText(2)
     }
-  }
-});
+  },
+})
 
 // Optionally, adjust section height based on screen size
 function adjustSectionHeight() {
-  const processSection = document.getElementById('paper-boat-process');
-  processSection.style.height = `${window.innerHeight * 4}px`;
+  const processSection = document.getElementById("paper-boat-process")
+  processSection.style.height = `${window.innerHeight * 4}px`
 }
 
-adjustSectionHeight();
-window.addEventListener('resize', adjustSectionHeight);
-
-//follow
-gsap.to("#instagram-follow .grid > div", {
-  y: 0,
-  opacity: 1,
-  duration: 0.8,
-  stagger: 0.2,
-  scrollTrigger: {
-    trigger: "#instagram-follow",
-    start: "top 50%",
-    end: "bottom top"
-  }
-});
+adjustSectionHeight()
+window.addEventListener("resize", adjustSectionHeight)
 
 document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuButton = document.getElementById("mobile-menu-button")
@@ -401,53 +388,127 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 })
 
-
 // hrushikesh's js
-const slider = document.querySelector("#newPinch");
-const footerele = document.querySelectorAll("#pgfooter");
-
-// Timeline for slider
-let tl1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: slider,
-    pin: true,
-    scrub: 1,
-    end: () => "+=" + slider.offsetWidth,
-  }
-});
-
-tl1.to(slider, {
-  xPercent: -66,
-  ease: "none"
-});
-
-// Individual ScrollTriggers for nostalgia sections
-gsap.utils.toArray(["#nostalgia1", "#nostalgia2", "#nostalgia3"]).forEach((section, index) => {
-  let elements = section.querySelectorAll('img, p');
-  gsap.from(elements, {
-    scrollTrigger: {
-      trigger: section,
-      start: "top 80%",
-      toggleActions: "play none none reverse"
-    },
-    x: (i) => i % 2 === 0 ? -50 : 50,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out",
-    stagger: 0.2
-  });
-});
-
+const footerele = document.querySelectorAll("#pgfooter")
 // Footer animation
 gsap.from("#c1, #c2, #c3", {
   scrollTrigger: {
     trigger: footerele,
     start: "top 80%",
-    toggleActions: "play none none reverse"
+    toggleActions: "play none none reverse",
   },
   y: 30,
   opacity: 0,
   duration: 1,
   ease: "power2.out",
-  stagger: 0.2
-});
+  stagger: 0.2,
+})
+
+function initHorizontalScroll() {
+  if (window.innerWidth > 768) {
+    const container = document.querySelector("#newPinch")
+    const totalWidth = container.scrollWidth - window.innerWidth
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top top",
+          end: () => `+=${totalWidth}`,
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      })
+      .to(container, {
+        x: () => -totalWidth,
+        ease: "none",
+      })
+  }
+}
+
+function initScrollTriggers() {
+  gsap.from("#rain", {
+    scrollTrigger: {
+      trigger: "#nostalgia1",
+      scrub: 2,
+    },
+    x: -500,
+    opacity: 0,
+    duration: 2,
+    ease: "expo",
+  })
+  gsap.from("#rainpara", {
+    scrollTrigger: {
+      trigger: "#nostalgia1",
+      scrub: 2,
+    },
+    x: 500,
+    opacity: 0,
+    duration: 2,
+    ease: "expo",
+  })
+  gsap.from("#aim", {
+    scrollTrigger: {
+      trigger: "#nostalgia2",
+      scrub: 2,
+    },
+    x: -500,
+    opacity: 0,
+    duration: 2,
+    ease: "expo",
+  })
+  gsap.from("#aimpara", {
+    scrollTrigger: {
+      trigger: "#nostalgia2",
+      scrub: 2,
+    },
+    x: 500,
+    opacity: 0,
+    duration: 2,
+    ease: "expo",
+  })
+  gsap.from("#animal", {
+    scrollTrigger: {
+      trigger: "#nostalgia3",
+      scrub: 2,
+    },
+    x: -500,
+    opacity: 0,
+    duration: 2,
+    ease: "expo",
+  })
+  gsap.from("#animalpara", {
+    scrollTrigger: {
+      trigger: "#nostalgia3",
+      scrub: 2,
+    },
+    x: 500,
+    opacity: 0,
+    duration: 2,
+    ease: "expo",
+  })
+
+  // Insta Section Animation
+  gsap.to("#instagram-follow .grid > div", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: "#instagram-follow",
+      start: "top 50%",
+      end: "bottom top",
+    },
+  })
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initHorizontalScroll()
+  initScrollTriggers() // Initialize other ScrollTriggers
+})
+
+window.addEventListener("resize", function () {
+  ScrollTrigger.refresh()
+})

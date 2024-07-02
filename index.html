@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/3NTFxVNb/paper-boat-logo-concept-cartoon-icon-flat-free-vector-3621016111-removebg-preview-1.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.postimg.cc/3NTFxVNb/paper-boat-logo-concept-cartoon-icon-flat-free-vector-3621016111-removebg-preview-1.png"
+    />
     <title>Paper Boat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,7 +70,7 @@
       class="bg-gradient-to-b from-[#00b4d8] to-white h-[15rem] mt-[-4rem] mix-blend-lighten"
     ></div>
 
-    <nav  
+    <nav
       class="w-full h-16 md:h-20 sticky top-0 flex items-center justify-between px-4 md:px-12 z-50"
     >
       <img src="./assets/logo.png" alt="" class="w-16 md:w-20" />
@@ -150,92 +154,94 @@
           <div class="font-semibold text-lg cursor-pointer">Foods</div>
         </div>
         <div class="flex justify-center mt-8 gap-4">
-          <img src="./assets/account-icon.png" alt="" class="h-6 cursor-pointer" />
+          <img
+            src="./assets/account-icon.png"
+            alt=""
+            class="h-6 cursor-pointer"
+          />
           <img src="./assets/search.svg" alt="" class="h-6 cursor-pointer" />
           <img src="./assets/cart.svg" alt="" class="h-6 cursor-pointer" />
         </div>
       </div>
 
       <div
-      class="absolute top-20 left-0 w-full hidden sm:flex-row flex-col"
-      id="food-nav"
-    >
-      <div
-        id="expanded-nav-food"
-        class="bg-[#e8e8e8] w-full flex flex-col divide-y-2 divide-gray-400 px-6"
+        class="absolute top-20 left-0 w-full hidden sm:flex-row flex-col"
+        id="food-nav"
       >
         <div
-          class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full food-nav-option"
+          id="expanded-nav-food"
+          class="bg-[#e8e8e8] w-full flex flex-col divide-y-2 divide-gray-400 px-6"
         >
-          Nuts, Seeds & Berries
+          <div
+            class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full food-nav-option"
+          >
+            Nuts, Seeds & Berries
+          </div>
+          <div
+            class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full food-nav-option"
+          >
+            Gifts Galore
+          </div>
+          <div
+            class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full food-nav-option"
+          >
+            Sweet Bites
+          </div>
+          <div
+            class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full food-nav-option"
+          >
+            Dairy
+          </div>
         </div>
-        <div
-          class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full food-nav-option"
-        >
-          Gifts Galore
-        </div>
-        <div
-          class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full food-nav-option"
-        >
-          Sweet Bites
-        </div>
-        <div
-          class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full food-nav-option"
-        >
-          Dairy
+        <div id="nav-photo" class="sm:w-2/3 md:block hidden">
+          <img
+            src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/ad1d6f5b-c9ab-405c-b8fa-b747617db8f7.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+            alt=""
+            class="w-full object-cover h-64"
+            id="food-nav-img"
+          />
         </div>
       </div>
-      <div id="nav-photo" class="sm:w-2/3 md:block hidden">
-        <img
-          src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/ad1d6f5b-c9ab-405c-b8fa-b747617db8f7.__CR0,0,970,600_PT0_SX970_V1___.jpg"
-          alt=""
-          class="w-full object-cover h-64"
-          id="food-nav-img"
-        />
-      </div>
-    </div>
 
-    <div
-      class="absolute hidden top-20 left-0 w-full sm:flex-row flex-col"
-      id="bev-nav"
-    >
       <div
-        id="expanded-nav-bev"
-        class="bg-[#e8e8e8] w-full flex flex-col divide-y-2 divide-gray-400 px-6"
+        class="absolute hidden top-20 left-0 w-full sm:flex-row flex-col"
+        id="bev-nav"
       >
         <div
-          class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full expanded-bev-nav-option"
+          id="expanded-nav-bev"
+          class="bg-[#e8e8e8] w-full flex flex-col divide-y-2 divide-gray-400 px-6"
         >
-          Swing Juices
+          <div
+            class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full expanded-bev-nav-option"
+          >
+            Swing Juices
+          </div>
+          <div
+            class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full expanded-bev-nav-option"
+          >
+            Traditional Drinks
+          </div>
+          <div
+            class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full expanded-bev-nav-option"
+          >
+            Zero Sugar Drinks
+          </div>
+          <div
+            class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full expanded-bev-nav-option"
+          >
+            Coconut Water
+          </div>
         </div>
-        <div
-          class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full expanded-bev-nav-option"
-        >
-          Traditional Drinks
-        </div>
-        <div
-          class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full expanded-bev-nav-option"
-        >
-          Zero Sugar Drinks
-        </div>
-        <div
-          class="pl-4 hover:underline underline-offset-2 cursor-pointer flex items-center h-full expanded-bev-nav-option"
-        >
-          Coconut Water
+        <div id="nav-photo" class="sm:w-3/4 bg-[#F9E9D8] md:block hidden">
+          <img
+            src="https://i.postimg.cc/PrbKzjP2/swing-juices-cropped.jpg"
+            alt=""
+            class="w-full object-cover h-64 md:block hidden"
+            id="bev-nav-img"
+          />
         </div>
       </div>
-      <div id="nav-photo" class="sm:w-3/4 bg-[#F9E9D8] md:block hidden">
-        <img
-          src="https://i.postimg.cc/PrbKzjP2/swing-juices-cropped.jpg"
-          alt=""
-          class="w-full object-cover h-64 md:block hidden"
-          id="bev-nav-img"
-        />
-      </div>
-    </div>
     </nav>
-
-    
 
     <div
       id="hero2"
@@ -243,15 +249,17 @@
     >
       <div
         id="hero2-left"
-        class="h-full flex flex-col justify-evenly items-center gap-6 md:items-start pt-32 md:pt-[0]" 
+        class="h-full flex flex-col justify-evenly items-center gap-6 md:items-start pt-32 md:pt-[0]"
       >
         <h1 class="quotable text-4xl md:text-6xl hero-text">
           Sip into Nostalgia
         </h1>
         <h4
-          class="patrick text-lg md:max-w-[40vw] text-center md:text-left hero-text underline"
+          class="patrick text:lg md:text-xl md:max-w-[40vw] text-center md:text-left hero-text"
         >
-          Taste the flavors of your childhood, lovingly crafted from nature's best.<br/>Pure, authentic, and bursting with memories – just like you remember.
+          Taste the flavors of your childhood, lovingly crafted from nature's
+          best. Pure, authentic, and bursting with memories – just like you
+          remember.
         </h4>
         <div
           id="cta-btn"
@@ -589,51 +597,51 @@
       </div>
     </section>
 
-    
     <section id="paper-boat-process" class="relative overflow-hidden">
       <div class="process-content h-screen w-full overflow-hidden">
         <div
-        id="orchard"
-        class="absolute inset-0 bg-cover bg-center"
-        style="
+          id="orchard"
+          class="absolute inset-0 bg-cover bg-center"
+          style="
             background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fnatural-autumn-landscape-with-an-apple-orchard-vector-id1051147460%3Fk%3D6%26m%3D1051147460%26s%3D170667a%26w%3D0%26h%3D4zsPtzl0pCC7AYx5-SMFYGqOC1o-mw8rPa1fE4HHwig%3D&f=1&nofb=1&ipt=9f3435a269745ee432d254d1913b863bb262594725cd0031fb1a748d3cac83d8&ipo=images');
           "
         ></div>
         <div
-        id="factory"
-        class="absolute inset-0 bg-cover bg-center opacity-0"
-        style="
+          id="factory"
+          class="absolute inset-0 bg-cover bg-center opacity-0"
+          style="
             background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F256%2F243%2Flarge_2x%2Ffactory-workers-clip-art-vector.jpg&f=1&nofb=1&ipt=59aa841aa2bb2be854ec20cfaa16b3b7540c55767851025bef2b21b8c7269299&ipo=images');
           "
         ></div>
-        
+
         <img
           id="fruit"
           src="/assets/mango.png"
           class="absolute left-1/2 top-1/2 w-24 h-24 transform -translate-x-1/2 -translate-y-1/2"
           alt="Fruit"
-          />
-          <img
+        />
+        <img
           id="juice-drop"
           src="/assets/juice-drop.png"
           class="absolute left-1/2 w-4 h-4 transform -translate-x-1/2 opacity-0"
           alt="Juice drop"
-          />
-          <img
+        />
+        <img
           id="paper-boat-bottle"
           src="/assets/paper-boat-bottle.png"
           class="absolute left-1/2 bottom-0 w-64 transform -translate-x-1/2 translate-y-full z-50 opacity-0"
           alt="Paper Boat Bottle"
-          />
-          
-          <div
+        />
+
+        <div
           id="process-text"
           class="absolute left-1/2 top-1/4 transform -translate-x-1/2 text-center text-[#252525] text-3xl font-bold opacity-0 drop-shadow-2xl bg-white p-4 rounded-xl patrick"
-          >
+        >
           Fresh fruits picked at peak ripeness
         </div>
       </div>
     </section>
+
     <section
       id="testimonials"
       class="relative h-screen overflow-hidden bg-blue-200"
@@ -672,24 +680,29 @@
       </div>
     </section>
 
-    <div id="newPinch" class="flex min-h-screen w-screen">
+    <div
+      id="newPinch"
+      class="flex flex-col md:flex-row min-h-screen w-full overflow-x-hidden"
+    >
       <div
         id="coriander"
-        class="flex justify-around items-center min-h-screen"
+        class="flex justify-center items-center min-h-screen w-full md:w-screen p-4"
         data-sliditem="coriander"
       >
-        <div class="grid bg-green-300 bg-opacity-80 p-6 rounded-lg shadow-lg">
-          <div id="coro" class="rounded-3xl">
+        <div
+          class="grid bg-green-300 bg-opacity-80 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 max-h-[80dvh] max-w-[30dvw]"
+        >
+          <div id="coro" class="rounded-3xl overflow-hidden">
             <img
               src="/assets/corianderbuttermilk.jpg"
               alt="Image 1"
-              class="rounded-3xl transition-transform transform hover:scale-105"
+              class="w-full h-auto transition-transform duration-300 transform hover:scale-105"
             />
           </div>
-          <h2 class="text-2xl mt-4">Coriander Buttermilk</h2>
-          <h3 class="text-lg text-gray-500 mt-2 mb-4">₹30/-</h3>
+          <h2 class="text-xl md:text-2xl mt-4">Coriander Buttermilk</h2>
+          <h3 class="text-lg mt-2 mb-4">₹30/-</h3>
           <button
-            class="bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800"
+            class="bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors duration-300"
           >
             Add to Cart
           </button>
@@ -697,10 +710,12 @@
       </div>
       <div
         id="apple"
-        class="flex justify-center items-center min-h-screen w-screen"
+        class="flex justify-center items-center min-h-screen w-full md:w-screen p-4"
         data-sliditem="apple"
       >
-        <div class="grid bg-red-600 bg-opacity-90 p-6 rounded-lg shadow-lg">
+        <div
+          class="grid bg-red-600 bg-opacity-80 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 max-h-[80dvh] max-w-[30dvw]"
+        >
           <div class="rounded-3xl">
             <img
               src="/assets/applejuice.jpg"
@@ -708,10 +723,10 @@
               class="rounded-3xl transition-transform transform hover:scale-105"
             />
           </div>
-          <h2 class="text-2xl mt-4">Apple Juice</h2>
-          <h3 class="text-lg text-gray-800 mt-2 mb-4">₹15/-</h3>
+          <h2 class="text-xl md:text-2xl mt-4 text-white">Apple Juice</h2>
+          <h3 class="text-lg text-white mt-2 mb-4">₹15/-</h3>
           <button
-            class="bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 mt-2"
+            class="bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors duration-300"
           >
             Add to Cart
           </button>
@@ -719,10 +734,12 @@
       </div>
       <div
         id="coconut"
-        class="flex justify-center items-center min-h-screen w-screen"
+        class="flex justify-center items-center min-h-screen w-full md:w-screen p-4"
         data-sliditem="coconut"
       >
-        <div class="grid bg-green-400 bg-opacity-80 p-6 rounded-lg shadow-lg">
+        <div
+          class="grid bg-green-400 bg-opacity-80 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 max-h-[80dvh] max-w-[30dvw]"
+        >
           <div class="rounded-3xl">
             <img
               src="/assets/coconutwater.jpg"
@@ -730,10 +747,10 @@
               class="rounded-3xl transition-transform transform hover:scale-105"
             />
           </div>
-          <h2 class="text-2xl mt-4">Coconut Water</h2>
-          <h3 class="text-lg text-gray-500 mt-2 mb-4">₹30/-</h3>
+          <h2 class="text-xl md:text-2xl mt-4">Coconut Water</h2>
+          <h3 class="text-lg mt-2 mb-4">₹30/-</h3>
           <button
-            class="bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 mt-2"
+            class="bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors duration-300"
           >
             Add to Cart
           </button>
@@ -741,22 +758,25 @@
       </div>
     </div>
 
-    <div id="nostalgia">
-      <div id="nostalgia1" class="grid justify-center">
+    <div id="nostalgia" class="w-full overflow-x-hidden">
+      <div id="nostalgia1" class="grid justify-center p-4">
         <h1
-          class="text-4xl nostalgic-font-courier text-center text-black my-8 underline"
+          class="text-3xl md:text-4xl nostalgic-font-courier text-center text-black my-8 underline"
         >
           Nostalgia Corner
         </h1>
-        <div id="rainy" class="flex items-center justify-center space-x-6 p-6">
+        <div
+          id="rainy"
+          class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6 p-6"
+        >
           <img
             src="/assets/nostalgia1.jpg"
             alt="Rainy"
-            class="h-64 w-64 rounded-2xl border-2 border-black"
+            class="h-48 w-48 md:h-64 md:w-64 rounded-2xl border-2 border-black"
             id="rain"
           />
           <p
-            class="ml-4 text-justify indent-8 leading-relaxed translate-x-28 translate-y-56"
+            class="text-sm md:text-base text-justify indent-8 leading-relaxed md:ml-4"
             data-para="rainyday"
             id="rainpara"
           >
@@ -769,16 +789,16 @@
       </div>
       <div
         id="nostalgia2"
-        class="flex items-center justify-center space-x-6 p-6"
+        class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6 p-6"
       >
         <img
           src="/assets/nostalgia4.jpg"
           alt="aim through"
-          class="h-64 w-64 rounded-2xl border-2 border-black"
+          class="h-48 w-48 md:h-64 md:w-64 rounded-2xl border-2 border-black"
           id="aim"
         />
         <p
-          class="ml-4 text-justify indent-8 leading-relaxed translate-x-28 translate-y-56"
+          class="text-sm md:text-base text-justify indent-8 leading-relaxed md:ml-4"
           data-para="rainyday"
           id="aimpara"
         >
@@ -790,16 +810,16 @@
       </div>
       <div
         id="nostalgia3"
-        class="flex items-center justify-center space-x-6 p-6"
+        class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6 p-6"
       >
         <img
           src="/assets/nostalgia5.jpg"
           alt="animal"
-          class="h-64 w-64 rounded-2xl border-2 border-black"
+          class="h-48 w-48 md:h-64 md:w-64 rounded-2xl border-2 border-black"
           id="animal"
         />
         <p
-          class="ml-4 text-justify indent-8 leading-relaxed translate-x-28 translate-y-40"
+          class="text-sm md:text-base text-justify indent-8 leading-relaxed md:ml-4"
           data-para="rainyday"
           id="animalpara"
         >
@@ -878,49 +898,52 @@
       </div>
     </section>
 
-    <div id="pgfooter" class="flex text-black justify-around items-start p-8">
-      <div id="c1" class="grid">
+    <div
+      id="pgfooter"
+      class="flex flex-col md:flex-row text-black justify-around items-start p-8"
+    >
+      <div id="c1" class="grid mb-8 md:mb-0">
         <h1 class="text-xl font-semibold mb-4">Shop</h1>
         <div class="grid gap-2">
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Beverages"
             >Beverages</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Snacks"
             >Snacks</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Almonds"
             >Almonds</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Berries and Nuts"
             >Berries and Nuts</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Top in class"
             >Top in class</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="New in"
             >New in</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Bundles"
             >Bundles</a
           >
@@ -931,49 +954,49 @@
         <div class="grid gap-2">
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Blogs"
             >Blogs</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Memories & More"
             >Memories & More</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Search"
             >Search</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Privacy Policy"
             >Privacy Policy</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Refund Policy"
             >Refund Policy</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Shipping Policy"
             >Shipping Policy</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Terms & Conditions"
             >Terms & Conditions</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Contact Us"
             >Contact Us</a
           >
@@ -984,25 +1007,25 @@
         <div class="grid gap-2">
           <a
             href="https://www.instagram.com/paperboatdrinks/"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Instagram"
             >Instagram</a
           >
           <a
             href=""
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="Facebook"
             >Facebook</a
           >
           <a
             href="https://www.linkedin.com/company/hector-beverages-pvt-ltd/"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="LinkedIn"
             >LinkedIn</a
           >
           <a
             href="#"
-            class="hover:text-gray-600 hover:underline"
+            class="hover:text-gray-600 hover:underline transition-colors duration-300"
             data-footer="X"
             >X</a
           >
